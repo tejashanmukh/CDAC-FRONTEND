@@ -1,0 +1,43 @@
+<app-patient></app-patient>
+<div class="container" style="background-color: antiquewhite;"> 
+  <div class="table-responsive">
+    <table class="table table-hover">     
+      <tbody>
+        <tr *ngFor="let d of data">
+        <div> 
+          <h4><td>Doctor Name:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{d.name}}</td></h4>
+        </div>
+          <br>
+  
+        <div>  
+          <h4><td>Hospital Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{d.drDetails.hospName}}</td></h4>
+        </div>
+          <br>
+  
+        <div>  
+         <h4> <td>Hospital Address: &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{{d.drDetails.hospAddress}}</td></h4>
+        </div>
+  
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+    <form #myForm="ngForm" (ngSubmit)="bookApp(myForm.value)" class="form-inline" role="form">
+  
+    <div class="form-group">
+      <label  for="Date">Appointment Date</label><br>
+      <input type="datetime-local" class="form-control" id="" ngModel name="appDate" placeholder="Input field">
+    </div><br>
+  <!-- 
+    <div class="form-group">
+      <label  for="Time">Time</label><br>
+      <input type="time" class="form-control" id=""   ngModel name="appTime"  placeholder="Input field">
+    </div><br> -->
+  
+    <br>  
+    <button type="submit" class="btn btn-primary">Confirm</button>
+    </form>
+  </div>
+  <span style="color: whitesmoke;">{{msg}}</span>
+  

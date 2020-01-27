@@ -1,0 +1,27 @@
+<div class="container" style="background-color:whitesmoke;margin-top:10%; width:50%;opacity:0.9;">
+  <h1 style="color:black;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+    USERDETAILS</h1>
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>Email</th>
+        <th>UserGender</th>
+        <th>UserType</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of data">
+        <td>{{s.userId}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.userGender}}</td>
+        <td>{{s.userType}}</td>
+        <td>
+        <button type="button" (click)="deleteUser(s.userId)" class="btn btn-danger">Delete</button>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

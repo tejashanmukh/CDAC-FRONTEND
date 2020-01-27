@@ -1,0 +1,92 @@
+
+<div style="background-color:black; margin-left:30%;margin-top:10%; width:45%;opacity:0.7;">
+  <h1 style="color:whitesmoke;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+    ACCEPT APPOINTMENT</h1>
+<!-- <div>
+  <nav class="navbar navbar-default" fie role="navigation">
+    <ul class="nav navbar-nav">      
+      <li class="active">
+        <a routerLink="/doctor">Home</a>
+      </li>  
+    </ul>
+  </nav>
+</div> -->
+
+
+<div class="table-responsive">
+  <table class="table responsive">
+    <thead>
+      <tr>
+        <th style="color:whitesmoke;">Patient Id</th>
+        <th style="color:whitesmoke">Appoitment Date</th>
+        <th style="color:whitesmoke">Appintment Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of result">
+        <td style="color:whitesmoke">{{res.ptId.patientId}}</td>
+        <td style="color:whitesmoke">{{res.appDate|date:"yyyy-MM-dd"}}</td>
+        <td style="color:whitesmoke">{{res.appTime}}</td>
+        <td>
+
+          <button type="button"  (click)="getPatientdetails(res.ptId.patientId,res.appId)" class="btn btn-primary">View Details</button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="table-responsive">
+  <table class="table table-responsive">
+ 
+    <tbody>
+      <tr>
+         <th style="color:whitesmoke;">Patient Name</th>
+        <td style="color:whitesmoke">{{appTptdt.name}}</td>
+      </tr>
+      <tr>
+        <th style="color:whitesmoke">Patient Email</th>
+        <td style="color:whitesmoke">{{appTptdt.email}}</td>
+      </tr>
+      <tr>
+        <th style="color:whitesmoke">Patient age</th>
+        <td style="color:whitesmoke">{{appTptdt.age}}</td>
+      </tr>
+      <tr> 
+      <td>
+        
+          <button type="button"  (click)="confirmAppt()" class="btn btn-primary">Accept Request</button>
+          
+      </td>
+      <td>
+        
+        <button type="button"  (click)="RejectAppt()" class="btn btn-primary">Decline Request</button>
+        
+      </td>
+
+      </tr>
+    </tbody>
+  </table>
+  
+  <button type="button" routerLink="/doctor" class="btn btn-success">DOCTORHOME</button>
+  
+</div>
+</div>
+
+
+
+
+
+
+

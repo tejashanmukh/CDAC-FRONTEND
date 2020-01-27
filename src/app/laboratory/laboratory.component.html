@@ -1,0 +1,41 @@
+
+<div class="container" style="background-color:whitesmoke;margin-top:10%; width:50%;opacity:0.9;">
+  <h1 style="color:black;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+    LABORATORYDETAILS</h1>  
+
+  <div class="table-responsive">
+    <table class="table table-responsive">
+      <thead>
+        
+        <tr>
+          <th>Labid</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Phoneno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let labs of lab">
+          <td>{{labs.labid}}</td>
+          <td>{{labs.address}}</td>
+          <td>{{labs.city}}</td>
+          <td>{{labs.email}}</td>
+          <td>{{labs.name}}</td>
+          <td>{{labs.phonenum}}</td>
+           <td>
+            <button type="button" (click)="delete(labs.labid)"  class="btn btn-danger">Delete</button>
+            </td>
+             <td>
+            <button type="button"  (click)="senddata(labs.labid)" class="btn btn-warning">Update</button>
+          </td> 
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  
+   <button (click)="gotoadmin()" type="button" class=" btn btn-success">ADMINHOME</button>&nbsp;&nbsp;
+  <button type="button" routerLink="/addlab" class="btn btn-success">ADDLAB</button>
+  

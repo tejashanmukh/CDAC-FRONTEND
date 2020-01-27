@@ -1,0 +1,42 @@
+
+<div class="container" style="background-color:whitesmoke;margin-top:10%; width:60%;opacity:0.9;">
+  <h1 style="color:black;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+    MEDICALSHOPLIST</h1>  
+<div class="table-responsive" >
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Shopid</th>
+        <th>MedicalShopName</th>
+        <th>City</th>
+        <th>PhoneNo</th>
+        <th>OwnerName</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let meds of med">
+        <td>{{meds.shopid}}</td>
+        <td>{{meds.medicalshopname}}</td>
+        <td>{{meds.city}}</td>
+        <td>{{meds.phno}}</td>
+        <td>{{meds.ownername}}</td>
+        <td>{{meds.address}}</td>
+         <td>
+            <button type="button" (click)="delete(meds.shopid)"  class="btn btn-danger">Delete</button>
+          </td>
+          <td>
+          <button type="button" (click)="senddata(meds.shopid)"  class="btn btn-danger">Update</button>
+          </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div>
+  <button type="button" (click)="gotohome()" class="btn btn-success">GOTOADMINHOME</button>&nbsp;&nbsp;
+      
+      
+  <button type="button" routerLink="/addmedical" class="btn btn-success">ADDMEDICAL</button>
+  </div>

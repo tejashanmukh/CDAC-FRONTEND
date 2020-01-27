@@ -1,0 +1,28 @@
+<div style="background-color:whitesmoke; margin-left:30%;margin-top:10%; width:40%;opacity:0.9;">
+ 
+  <h1 style="color:black;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+    ADD PATIENTDETAILS</h1>
+  <form  #loginform="ngForm" (ngSubmit)=form(loginform)  role="form" ngNativeValidate>
+    <div class="form-group">
+      <label  for="bloodgroup">Blood form-group</label>
+      <input type="text" class="form-control" placeholder="Enter Bloodgroup" required ngModel name="bloodgroup">
+    </div>
+    <div class="form-group">
+      <label  for="bodyMassIndex">BodyMassIndex</label>
+      <input type="text" class="form-control" placeholder="Enter BodyMassIndex" required  ngModel name="bodyMassIndex">
+    </div>
+    
+    <div class="form-group">
+      <label  for="height">Height</label>
+      <input type="number" class="form-control" placeholder="enter Height"  max=7 required   ngModel name="height">
+    </div>
+
+    <div class="form-group">
+      <label  for="ptWeight">Weight</label>
+      <input type="number" class="form-control" placeholder="enter Weight"    required   ngModel name="ptWeight">
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  </div>

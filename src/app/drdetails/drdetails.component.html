@@ -1,0 +1,68 @@
+<app-patient></app-patient>
+<div style="background-color:whitesmoke; margin-left:30%;margin-top:10%; width:40%;opacity:0.9;">
+  <h1 style="color:black;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+    PLEASE ENTER DETAILS HERE</h1>
+<form #myForm="ngForm" (ngSubmit)="getDr(myForm.value)" class="form-inline" role="form">
+  <div class="form-group">
+    <label for="hospAddress">City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" class="form-control" ngModel name="hospAddress" placeholder="Address" required>
+  </div><br><br>
+  <div class="form-group">
+    <label for="expertise">Expertise</label>&nbsp;&nbsp;
+    <input type="text" class="form-control" ngModel name="expertise" placeholder="Expertise" required>
+  </div><br><br>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+
+
+
+<br>
+<br>
+
+
+
+
+
+<div class="table-responsive" *ngIf="isFetch()">
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th style="background-color: whitesmoke;">Doctor Name</th>
+        <th  style="background-color: whitesmoke;">Expertise</th>
+        <th  style="background-color: whitesmoke;">Experience</th>
+        <!-- <th>Expertise</th> -->
+        <th  style="background-color: whitesmoke;">Hospital Name</th>
+        <th  style="background-color: whitesmoke;">Hospital Address</th>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of details">
+        <td style="background-color: whitesmoke;" >{{detail.name}}</td>
+        <td style="background-color: whitesmoke;">{{detail.drDetails.expertise}}</td>
+        <td style="background-color: whitesmoke;">{{detail.drDetails.experience}}</td>
+        <td style="background-color: whitesmoke;">{{detail.drDetails.hospName}}</td>
+        <td style="background-color: whitesmoke;">{{detail.drDetails.hospAddress}}</td>
+        <!-- <td>{{detail.drDetails.doctorId}}</td> -->
+        <td>
+          
+          <button type="button" (click)="goToBooking(detail.drDetails.doctorId)" class="btn btn-large btn-block btn-info">BookIng</button>
+        
+        </td>
+       
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+

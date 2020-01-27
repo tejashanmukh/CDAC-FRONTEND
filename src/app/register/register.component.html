@@ -1,0 +1,57 @@
+<div style="background-color:black; margin-left:30%;margin-top:5%; width:40%;opacity:0.7;">
+
+    <h1 style="color:whitesmoke;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+        REGISTER HERE</h1>
+                    
+  <form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form" ngNativeValidate>
+    <div class="form-group">
+      <label  style="color:whitesmoke" for="name">Name:</label>
+      <input type="name"  class="form-control" placeholder="Enter name" ngModel name="name" required>
+    </div>
+    <div class="form-group">
+      <label   style="color:whitesmoke" for="Age">Age:</label>
+      <input type="number"  class="form-control" placeholder="Enter Age" max="75" ngModel name="age" required>
+    </div>
+    <div class="form-group">
+      <label  style="color:whitesmoke" for="userGender">Gender:</label>
+      <select name="userGender" ngModel required>
+        <option value="none selected">please select below your Gender</option>
+        <option value="MALE">Male</option>
+        <option value="FEMALE">Female</option>
+        <option value="OTHER">other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label  style="color:whitesmoke" for="Email">Email:</label>
+      <input type="email"  class="form-control" placeholder="Enter Email" ngModel name="email" required>
+    </div>
+    <div class="form-group">
+        <label  style="color:whitesmoke" for="address">address:</label>
+        <input type="address"  class="form-control" placeholder="Enter address" ngModel name="address" required>
+      </div>
+      <div class="form-group">
+        <label  style="color:whitesmoke" for="phoneno">phoneno:</label>
+        <input type="number"  class="form-control" placeholder="Enter phoneno" ngModel name="phone" minlength="9"maxlength="12" required>
+      </div>
+      <div class="form-group">
+          <label  style="color:whitesmoke"for="password">password:</label>
+          <input type="password"  class="form-control" placeholder="Enter password" ngModel name="password" hidden required>
+      </div>
+        <div class="form-group">
+            <label  style="color:whitesmoke" for="userType">userType:</label>
+            <select ngModel name="userType" required>
+              <option value="none selected">please select your role</option>
+              <option value="DOCTOR">Doctor</option>
+              <option value="PATIENT">Patient</option>
+            </select>
+          </div>
+         
+    <br>
+    <button type="submit" class="btn btn-primary">Save</button>&nbsp;&nbsp;&nbsp;
+    <button type="cancel" (click)="gotologinpage()" class="btn btn-primary">cancel</button>
+   
+    
+  </form>
+</div>
+

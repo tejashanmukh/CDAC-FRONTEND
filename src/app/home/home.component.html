@@ -1,0 +1,89 @@
+<div>
+
+  <h1 style="color:silver;font-family: T ;text-align: center;"><b>HEALTHCARE </b></h1>
+
+  <div>
+    <nav class="navbar navbar-default navbar" role="navigation" style="background-color:black;">
+      <ul class="nav navbar-nav">
+
+        <li>
+          <a routerLink="/login">Login</a>
+        </li>
+
+        <li>
+          <a routerLink="/register">Register</a>
+        </li>
+        <li>
+          <a routerLink="/aboutus">About us</a>
+        </li>
+        <li>
+          <a routerLink="/medicalshoppeople">Medical Shop</a>
+        </li>
+
+        <!-- <li style="margin-left: 1130px;">
+                      <a href="logout">logout</a>
+               </li> -->
+      </ul>
+
+    </nav>
+  </div>
+
+
+  <router-outlet></router-outlet>
+  <br>
+
+  <div class="container">
+
+  </div>
+
+
+  <div>
+    <h1 style="color:whitesmoke;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align: center;">
+      ARTICLES</h1>
+  </div>
+  <div class="table-responsive d-flex justify-content-centre" style="background-color: rgb(10, 12, 12); margin-top:80px; ">
+    <table class="table table-hover">
+      <tr>
+        <td *ngFor="let a of san">
+
+
+          <div style="width:40%;">
+            <table class="table table-hover">
+              <tr>
+                <td>
+                  Article by Dr.{{a.name}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Subject :{{a.subject}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>{{a.description}}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="{{a.image}}" alt="">
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- <article>
+    
+    <h1>Article by Dr.{{a.name}}<h1>
+    <h1>Subject :{{a.subject}}</h1>
+    <p>{{a.description}}</p>    
+    <img src="{{a.image}}" alt="">
+    
+</article> -->
+        </td>
+
+      </tr>
+
+    </table>
+  </div>
+  articles

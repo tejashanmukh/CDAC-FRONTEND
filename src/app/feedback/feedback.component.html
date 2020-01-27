@@ -1,0 +1,9 @@
+<div class="container" style="color:white;margin-left:40%;margin-top:15%; width:40%;opacity:0.7;">
+<form #myForm="ngForm" (ngSubmit)="add(myForm.value)"  class="form-inline" role="form">
+  <div  class="form-group">
+    <label for="feedback" style="text-align: center;color: whitesmoke;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">FEEDBACK</label><br>
+    <input style="width: 400px;" type="text" class="form-control"  ngModel name="feedback" placeholder="Enter feedback">
+  </div><br><br>
+  <button type="submit"  class="btn btn-primary">Submit</button>
+</form>
+<div>

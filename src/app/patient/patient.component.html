@@ -1,0 +1,58 @@
+<div>
+  <h1 style="color:whitesmoke;font-family: Arial, Helvetica, sans-serif;font-style: italic;text-align:center;">
+    PATIENTHOMEPAGE</h1> 
+</div>
+<div>
+  <nav class="navbar navbar-default" fie role="navigation">
+    <ul class="nav navbar-nav">
+
+      <li class="active">
+        <a style="background-color: whitesmoke; color:black" routerLink="/addpatientinfo">addinfo</a>
+      </li>
+      <li class="active">
+        <a style="background-color: whitesmoke; color:black" routerLink="/forgotpassword">changepassword</a>
+      </li>
+      <li class="active">
+        <a style="background-color: whitesmoke; color:black" routerLink="/updateptinfo">update</a>
+      </li>
+      <li class="active">
+        <a  style="background-color: whitesmoke; color:black"routerLink="/listalldoctors">listalldoctors</a>
+      </li>
+    <li class="active">
+      <a  style="background-color: whitesmoke; color:black"routerLink="/drdetails">doctordetails</a>
+    </li>
+    <li>
+      <a (click)="getApptDetails()"> View AppointMent</a>
+</li>
+
+      <!-- <li class="active">
+                <a routerLink="/doctor">Doctor Details</a>
+              </li> -->
+
+      <li>
+        <a  style="background-color: whitesmoke; color:black"(click)="logout()">logout</a>
+      </li>
+    </ul>
+
+  </nav>
+  <div>
+    <table>
+      <tr *ngFor="let c of apptDetails">
+         <td><h3 style="color:whitesmoke;">Your Appointment on {{c.appDate|date:"yyyy:MM:dd"}} @ {{c.appTime}} at {{c.drId.hospName}},{{c.drId.hospAddress}} is {{c.appStatus}}</h3></td>
+         <td>{{msg}}</td>  
+       </tr>
+    </table>
+   
+  </div>
+
+
+
+
+
+</div>
+<router-outlet></router-outlet>
+<br>
+
+<div class="container">
+
+</div>

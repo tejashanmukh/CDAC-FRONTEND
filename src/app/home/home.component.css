@@ -1,0 +1,15 @@
+ .bg
+ {
+     position: fixed;
+     width:100%;
+ }
+ .heading
+ {
+     background-color:rgb(177, 192, 219);
+   
+ }
+ /* body
+ {
+     background-image: url("src/assets/doctor.jpeg");
+     background-size: cover;
+ } */
